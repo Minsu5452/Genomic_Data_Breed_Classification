@@ -1,24 +1,29 @@
 # 유전체 품종 분류 | DACON 1위
 
-SNP 기반 가축 품종 분류 문제를 다룬 DACON 1위 솔루션입니다. 고차원 범주형 데이터를 안정적으로 다루기 위한 인코딩, 클래스 불균형 대응, 앙상블 설계를 중심으로 정리했습니다.
+> SNP 기반 가축 품종 분류 문제에서 feature engineering, 불균형 대응, ensemble 설계로 1위를 기록한 솔루션입니다.
 
-## 이 저장소에서 보이는 것
+## 한눈에 보기
 
-- high-cardinality categorical feature를 다루는 feature engineering
-- class imbalance 대응을 포함한 structured ML problem solving
-- leaderboard용 튜닝이 아니라 최종 일반화 성능을 노린 ensemble design
+| 항목 | 내용 |
+| --- | --- |
+| 유형 | Competition solution |
+| 결과 | 1위 / 716팀 |
+| 문제 | SNP 기반 가축 품종 다중 분류 |
+| 핵심 접근 | CatBoost Encoder, oversampling, voting ensemble |
+| 이 저장소가 증명하는 것 | structured ML 문제 해결력과 일반화 중심 실험 설계 역량 |
 
-## 결과
-
-- 1st / 716 teams
-- AAiCON 2023 공동 저자 논문으로 확장
-
-## 제가 맡은 역할
+## 제가 맡은 일
 
 - feature engineering 흐름을 설계했습니다.
 - CatBoost Encoder와 oversampling 전략을 적용했습니다.
 - voting ensemble로 최종 제출 구조를 만들었습니다.
 - 수상 이후 코드 논문 작성에도 참여했습니다.
+
+## 이 저장소에서 읽히는 강점
+
+- high-cardinality categorical feature를 다루는 feature engineering 역량이 보입니다.
+- class imbalance 대응을 포함한 structured ML problem solving 경험이 정리되어 있습니다.
+- leaderboard용 과적합보다 최종 일반화 성능을 노린 ensemble design을 확인할 수 있습니다.
 
 ## 저장소 구성
 
