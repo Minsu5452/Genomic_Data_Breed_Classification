@@ -61,4 +61,5 @@ Notebook outputs, execution counts, Colab metadata, and local Google Drive paths
 ## Links
 
 - [DACON competition page](https://dacon.io/competitions/official/236035/overview/description)
+- [DACON code share: Private 1st solution](https://dacon.io/competitions/official/236035/codeshare/7430)
 - [AAiCON 2023 publication record](https://github.com/Minsu5452/AI_Frenz_2023_Publication)
