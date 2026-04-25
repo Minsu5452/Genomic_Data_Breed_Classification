@@ -1,37 +1,64 @@
-# 유전체 품종 분류 | DACON 1위
+# Genomic Data Breed Classification
 
-> SNP 기반 가축 품종 분류 문제에서 feature engineering, 불균형 대응, ensemble 설계로 1위를 기록한 솔루션입니다.
+> First-place DACON solution for SNP-based breed classification using feature engineering, imbalance handling, and ensemble modeling.
 
-## 한눈에 보기
+## Overview
 
-| 항목 | 내용 |
+| Field | Details |
 | --- | --- |
-| 유형 | Competition solution |
-| 결과 | 1위 / 716팀 |
-| 문제 | SNP 기반 가축 품종 다중 분류 |
-| 핵심 접근 | CatBoost Encoder, oversampling, voting ensemble |
-| 이 저장소가 증명하는 것 | structured ML 문제 해결력과 일반화 중심 실험 설계 역량 |
+| Competition | 유전체 정보 품종 분류 AI 경진대회 |
+| Period | 2022.12.12 - 2023.01.16 |
+| Host | Chungnam National University BioAI Convergence Research Center |
+| Platform | DACON |
+| Result | 1st / 716 teams |
+| Team | 3 members, team lead |
+| Task | Multi-class breed classification from SNP/genomic data |
+| Main metric | Macro F1 |
 
-## 제가 맡은 일
+## Approach
 
-- feature engineering 흐름을 설계했습니다.
-- CatBoost Encoder와 oversampling 전략을 적용했습니다.
-- voting ensemble로 최종 제출 구조를 만들었습니다.
-- 수상 이후 코드 논문 작성에도 참여했습니다.
+- Built genotype-derived features from SNP name, chromosome, genetic distance, position, and nucleotide composition.
+- Encoded high-cardinality categorical SNP features with CatBoost Encoder.
+- Applied class-imbalance handling with SMOTE and BorderlineSMOTE variants.
+- Compared tree boosting and classical ML models, including CatBoost, LightGBM, XGBoost, Random Forest, Extra Trees, SVC, and MLP.
+- Combined strong models with weighted hard-voting ensembles for the final submission.
 
-## 이 저장소에서 읽히는 강점
+## Repository Structure
 
-- high-cardinality categorical feature를 다루는 feature engineering 역량이 보입니다.
-- class imbalance 대응을 포함한 structured ML problem solving 경험이 정리되어 있습니다.
-- leaderboard용 과적합보다 최종 일반화 성능을 노린 ensemble design을 확인할 수 있습니다.
+```text
+.
+|-- assets/
+|   `-- award_photo.jpeg
+|-- notebooks/
+|   |-- 01_feature_engineering_baseline.ipynb
+|   |-- 02_feature_engineering_smote_experiment.ipynb
+|   |-- 03_feature_engineering_variant.ipynb
+|   |-- 04_final_feature_set.ipynb
+|   |-- 05_feature_selection_baseline.ipynb
+|   |-- 06_model_comparison_fine_features.ipynb
+|   |-- 07_model_comparison_new_features.ipynb
+|   |-- 08_feature_selection_and_modeling.ipynb
+|   |-- 09_boosting_ensemble_experiment.ipynb
+|   |-- 10_catboost_experiment.ipynb
+|   |-- 11_submission_ensemble_experiment.ipynb
+|   |-- 12_final_submission_review.ipynb
+|   `-- 13_final_competition_solution.ipynb
+|-- reports/
+|   `-- final_competition_solution.pdf
+`-- requirements.txt
+```
 
-## 저장소 구성
+## Award
 
-- `Feature/`: SNP feature engineering 실험
-- `Modeling/`: feature selection, boosting, ensemble 비교
-- `[Private 1위]  CatboostEncoder + OverSampling + VotingClassfier.ipynb`: 최종 제출 노트북
+![Award photo](assets/award_photo.jpeg)
 
-## 링크
+## Public Scope
+
+The public repository keeps the solution notebooks and final solution PDF. Competition data, generated feature tables, trained models, and submission CSV files are intentionally excluded.
+
+Notebook outputs, execution counts, Colab metadata, and local Google Drive paths were removed for public portfolio use.
+
+## Links
 
 - [DACON competition page](https://dacon.io/competitions/official/236035/overview/description)
-- [AAiCON 2023 record](https://github.com/Minsu5452/AAiCON2023)
+- [AAiCON 2023 publication record](https://github.com/Minsu5452/AI_Frenz_2023_Publication)
