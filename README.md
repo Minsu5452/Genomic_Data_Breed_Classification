@@ -44,6 +44,7 @@
 |   |-- 12_final_submission_review.ipynb
 |   `-- 13_final_competition_solution.ipynb
 |-- reports/
+|   |-- award_certificate.pdf
 |   `-- final_competition_solution.pdf
 `-- requirements.txt
 ```
@@ -51,6 +52,8 @@
 ## Award
 
 ![Award photo](assets/award_photo.jpeg)
+
+DACON official certificate (verification code `#D20230214000003`): [`reports/award_certificate.pdf`](reports/award_certificate.pdf)
 
 ## Public Scope
 
